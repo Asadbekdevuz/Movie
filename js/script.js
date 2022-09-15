@@ -60,6 +60,13 @@ function render (arr) {
   console.log(wrapperList);
   elMovieList.appendChild(wrapperList);
 } 
+function errorm(err) {
+  elMovieList.innerHTML = "";
+
+  elMovieList.innerHTML = `
+  <li class="alert alert-danger w-50 text-center mx-auto ">${err}</li>
+  `;
+}
 
 
 const fetchingMovies = async (name = "batman", page = 1,type = "movie", year ) => {
@@ -68,12 +75,13 @@ const fetchingMovies = async (name = "batman", page = 1,type = "movie", year ) =
     let data = await respons.json()
     console.log(data.Search);
     render(data.Search);
-  }catch(e) {
-    console.log(e.message);
+  }catch(error) {
+    errorm("This movie is not available")
   }
   finally{
     spinnerAdd()
   }
+ 
 }   
 
 fetchingMovies()
