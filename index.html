@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examination-4</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.uzmovi.com/v1/images/favicon/favicon-32x32.png?v=2.6.2">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body class="bg-dark">
+  <header class="header d-flex justify-content-between  ">
+    <div class="header__container container d-flex align-items-center justify-content-between">
+      <div class="header__inner">
+        <a class="header__logo logo" href="index.html">
+          <img src="./img/logo.gif" alt="" class="logo__img">
+        </a>
+      </div>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list list-unstyled d-flex p-0 m-0 ">
+          <li class="nav__item">
+            <a class="nav__link " href="#link">BOSH SAHIFA</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">KINOLAR</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">SERIALLAR</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">JANR</a>
+          </li>
+
+          <li class="nav__item ">
+            <a class="nav__link " href="#link">YIL</a>
+
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">MAMLAKAT</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">KONSERT</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#link">TREYLER</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="main bg-dark">
+    <section class="hero">
+      <div class="hero__container container">
+        <form class="form ">
+
+          <div class="mb-3 d-flex justify-content-center  align-items-center pt-3">
+            <div class="w-75">
+              <input class="form-control input-form" type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Please, enter the name of the movie" autocomplete="off"
+                aria-label="enter the name the movie">
+            </div>
+
+            <div class="w-25">
+              <button class="btn btn-dark border-1 border-white ">Search
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-evenly">
+            <div class="mb-3 w-25">
+              <input class="form-control form-input-year " type="number" placeholder="create the movie year">
+            </div>
+
+            <div class="mb-3 w-25">
+              <select class="form-select form-select select-type" aria-label=".form-select-lg example">
+                <option hidden value="">select movie type</option>
+                <option value="movie">movie</option>
+                <option value="series">series</option>
+                <option value="game">game</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="cart">
+      <div class="cart__container container">
+        <ul class="list list-unstyled d-flex  flex-wrap">
+
+        </ul>
+
+        <div class="movies__paginations  my-5">
+          <div class="js-movies-paginations d-flex justify-content-center align-items-center">
+
+          </div>
+          <p class="text text-center fs-1 js-movies-page text-light">Page: 1</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Button trigger modal -->
+    <div class="movies__spinner spinner-border text-primary position-absolute top-0 end-0 bottom-0 start-0 m-auto d-none"
+    role="status" style="width: 3rem; height: 3rem;">
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="title" id="exampleModalLabel">Uzmovi.com</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="modal-img" src="https://picsum.photos/300/300" alt="sssss">
+            <h4 class="modal-title"></h4>
+            <h4 class="modal-year"></h4>
+            <h4 class="modal-type"></h4>
+
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+
+  <template class="template">
+    <li class="col-md-3 item px-3 mb-5">
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/1/320/280" alt="">
+        <h3 class="card-title title"></h3>
+        <h3 class="card-text text"></h3>
+
+        <button type="button" class="btn btn-primary more-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          More
+        </button>
+      </div>
+    </li>
+  </template>
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
